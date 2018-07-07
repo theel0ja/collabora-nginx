@@ -1,0 +1,10 @@
+version: "3"
+services:
+  cache:
+    restart: always
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/collabora.conf:ro
+    ports:
+      - "172.19.5.1:56433:80"
+
